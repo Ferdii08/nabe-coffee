@@ -1,6 +1,3 @@
-# Semua PR ke main wajib disetujui salah satu code owner di bawah.
-# - PR anggota tim  -> direview & di-merge oleh Product Owner (Hasbi1605)
-# - PR milik Hasbi  -> di-approve oleh Scrum Master (DarrelRadhitya), karena GitHub
-#                     tidak mengizinkan approve PR sendiri; merge tetap oleh Hasbi.
-# Aktif setelah ruleset "Require review from Code Owners" dipasang di branch main.
-* @Hasbi1605 @DarrelRadhitya
+# Semua PR anggota tim ke main wajib di-approve Product Owner sebelum di-merge.
+# PR milik Hasbi sendiri di-merge lewat bypass admin (GitHub tidak mengizinkan approve PR sendiri).
+* @Hasbi1605

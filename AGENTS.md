@@ -249,7 +249,7 @@ Buat database MySQL `nabe_coffee_db` lebih dulu dan sesuaikan `DB_USERNAME`/`DB_
 - Satu PR sebaiknya kecil, maksimal sekitar 400 baris perubahan di luar file lock/aset.
 - Kalau PR belum siap, buka sebagai **Draft**.
 - Review dan **merge hanya dilakukan oleh PM (`Hasbi1605`)**, dengan metode *Squash and merge*. Agent dan anggota lain tidak menekan tombol Merge walaupun secara teknis bisa.
-- PR milik PM sendiri di-approve oleh Scrum Master (`DarrelRadhitya`), karena GitHub tidak mengizinkan approve PR sendiri. Merge tetap dilakukan PM. Lihat [.github/CODEOWNERS](.github/CODEOWNERS).
+- Code owner hanya PM. PR milik PM sendiri di-merge PM lewat bypass admin, karena GitHub tidak mengizinkan approve PR sendiri. Lihat [.github/CODEOWNERS](.github/CODEOWNERS).
 
 ---
 
