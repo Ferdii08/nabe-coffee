@@ -26,6 +26,7 @@ Di akhir setiap sprint, PM memindahkan isi `[Unreleased]` ke versi baru dengan t
 
 
 ### Added
+- Layout publik (navbar, footer, topline), komponen Blade button/input/badge, halaman login admin, dan halaman Two-Factor Authentication (1.2, #3)
 - Skema database awal: tabel `menus`, `capacity_slots`, `promotions` + `branches` dan kolom `users` (`role`, `branch_id`, 2FA), beserta     model, factory, dan seeder (1.1, 1.4, #13)
 - Dokumen proyek: `AGENTS.md`, `CONTRIBUTING.md`, `docs/PRD.md`, dan `README.md` khusus Nabe Coffee
 - Template Pull Request, template issue tugas, dan `CODEOWNERS`
