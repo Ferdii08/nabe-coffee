@@ -20,7 +20,7 @@ Token sudah dipasang di `resources/css/app.css`, jadi cukup pakai kelas Tailwind
 
 | Token | Hex | Dipakai untuk |
 |---|---|---|
-| `primary` | `#086676` | Tombol utama, link, topline |
+| `primary` | `#006d8b` | Tombol utama, link, topline. Sama dengan warna logo resmi |
 | `primary-dark` | `#064b58` | Teks di atas `lime`, hover |
 | `ink` | `#153e43` | Warna teks utama, judul |
 | `muted` | `#5c6f6f` | Teks sekunder, keterangan, footer |
@@ -34,7 +34,7 @@ Token sudah dipasang di `resources/css/app.css`, jadi cukup pakai kelas Tailwind
 
 Latar halaman selalu `cream`, bukan putih. Putih hanya untuk kartu, input, panel admin, dan teks di atas `primary`.
 
-**Catatan warna logo:** logo resmi dari Nabe memakai teal **`#006d8b`**, sedikit berbeda dari `primary` di prototipe (`#086676`). Logo selalu dipakai dari file resminya, jangan diwarnai ulang. Untuk elemen UI tetap pakai `primary`. Apakah `primary` akan disamakan dengan warna logo, menunggu keputusan PM.
+**Catatan warna logo:** `primary` disamakan dengan teal logo resmi (`#006d8b`, keputusan PM 8 Nov 2026). Prototipe dan Figma masih memakai warna lama `#086676`, jadi kalau terlihat sedikit berbeda, yang benar adalah token di `app.css`. Logo selalu dipakai dari file resminya, jangan diwarnai ulang.
 
 ## 2. Tipografi
 

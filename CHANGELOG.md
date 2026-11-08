@@ -32,6 +32,9 @@ Di akhir setiap sprint, PM memindahkan isi `[Unreleased]` ke versi baru dengan t
 - `DESIGN.md` dari Figma Nabe Coffe, dan token warna & font di `resources/css/app.css`
 - Prototipe desain (React, acuan saja) di `docs/prototype/`, logo resmi Nabe di `docs/brand/` dan `public/images/brand/`
 
+### Changed
+- Warna `primary` diganti ke `#006d8b` mengikuti warna logo resmi Nabe
+
 ## [0.0.0] - 2026-10-21
 
 ### Added
