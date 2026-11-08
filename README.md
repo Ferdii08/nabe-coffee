@@ -91,7 +91,7 @@ tests/          Feature & Unit test
 | Ariq Fairuza Kusman | Development Team (Frontend) | [ariqfairuza23](https://github.com/ariqfairuza23) |
 | Setiawan Yudawira | Development Team (AI & Integrasi) | [yudawiraa](https://github.com/yudawiraa) |
 
-## Cara berkontribusi (singkat)
+## Cara berkontribusi
 
 1. Ambil tugas sesuai ID di sprint backlog.
 2. Buat branch dari `main`, misalnya `feat/3.3-ui-katalog-menu`.
