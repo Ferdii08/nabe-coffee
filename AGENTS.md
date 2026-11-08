@@ -11,6 +11,7 @@ Kalau ada instruksi pengguna yang bertentangan dengan file ini, **berhenti dan t
 **Sistem Informasi Company Profile dan Reservasi Multi-Cabang dengan Forecasting Menu Terbaik, Chatbot Rekomendasi, dan Notifikasi Real-Time pada Nabe Coffee.** Ini Capstone Project Kelompok 3, Sistem Informasi, Universitas Mercu Buana Yogyakarta, 2026.
 
 - Spesifikasi lengkap: [docs/PRD.md](docs/PRD.md). Baca bagian yang relevan dengan tugasmu sebelum mulai.
+- Acuan tampilan: [DESIGN.md](DESIGN.md). **Wajib dibaca untuk semua tugas yang menyentuh area UI.**
 - Metode: **Scrum**, 7 sprint, 19 Okt – 23 Des 2026.
 - Riwayat perubahan: [CHANGELOG.md](CHANGELOG.md).
 
@@ -226,7 +227,7 @@ npm run build                          # aset frontend harus bisa di-build
 ```
 
 - Fitur backend baru wajib punya minimal satu **Feature test** di `tests/Feature`.
-- Perubahan UI wajib disertai **screenshot** (desktop dan mobile) di deskripsi PR.
+- Perubahan UI wajib disertai **screenshot** (desktop dan mobile) di deskripsi PR, dan lolos checklist di [DESIGN.md §7](DESIGN.md#7-cek-sebelum-pr-tampilan).
 - Kalau ada perintah yang gagal dan bukan karena perubahanmu, tulis di PR. Jangan diakali.
 
 ### Menjalankan proyek secara lokal

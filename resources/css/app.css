@@ -5,7 +5,37 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
+/* Token desain Nabe Coffee. Detail pemakaian ada di DESIGN.md */
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Barlow Condensed', 'DM Sans', ui-sans-serif, sans-serif;
+
+    --color-primary: #086676;
+    --color-primary-dark: #064b58;
+    --color-ink: #153e43;
+    --color-muted: #5c6f6f;
+    --color-cream: #f8f7f2;
+    --color-line: #d9dfd8;
+    --color-soft: #e9eee5;
+    --color-lime: #d7ed8d;
+    --color-gold: #efcb79;
+    --color-blush: #f8dad2;
+    --color-red: #cc4639;
+    --color-orange: #edac6b;
+}
+
+@layer base {
+    body {
+        @apply bg-cream text-ink font-sans antialiased;
+    }
+
+    h1,
+    h2 {
+        @apply font-display font-bold uppercase leading-[0.97];
+    }
+
+    :focus-visible {
+        outline: 3px solid var(--color-red);
+        outline-offset: 4px;
+    }
 }

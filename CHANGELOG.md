@@ -29,6 +29,7 @@ Di akhir setiap sprint, PM memindahkan isi `[Unreleased]` ke versi baru dengan t
 - Template Pull Request, template issue tugas, dan `CODEOWNERS`
 - Tugas 1.5 Two-Factor Authentication (Google Authenticator) di sprint backlog, PRD, dan AGENTS.md
 - Keputusan hosting AWS EC2 Free Tier, dan diagram layer sistem untuk UTS (`docs/diagram-layer-sistem.png`)
+- `DESIGN.md` dari Figma Nabe Coffe, dan token warna & font di `resources/css/app.css`
 
 ## [0.0.0] - 2026-10-21
 
