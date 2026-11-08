@@ -1,8 +1,13 @@
 # DESIGN.md
 
-Acuan tampilan untuk semua tugas UI. Sumbernya file Figma **Nabe Coffe** (frame `/style — Panduan desain`) dan prototipe di repo `Hasbi1605/NabeCoffeeWebsiteDesign` (`src/index.css`). Kalau ada yang tidak tercantum di sini, buka Figma dan ikuti layarnya. Jangan bikin gaya baru sendiri.
+Acuan tampilan untuk semua tugas UI. Kalau ada yang tidak tercantum di sini, buka prototipe atau Figma dan ikuti layarnya. Jangan bikin gaya baru sendiri.
 
-Figma: https://www.figma.com/design/S58xD2VbByVWqj2DdpRO2e/Nabe-Coffe (minta akses ke Hasbi)
+| Sumber | Link |
+|---|---|
+| **Prototipe utama** (bisa diklik, acuan paling akhir) | https://visa-width-30826922.figma.site/ · kode: repo `Hasbi1605/Nabeww` |
+| Figma desain (70 layar + panduan gaya `/style`) | https://www.figma.com/design/S58xD2VbByVWqj2DdpRO2e/Nabe-Coffe (minta akses ke Hasbi) |
+
+Kalau prototipe dan Figma berbeda, ikuti prototipe.
 
 ---
 
