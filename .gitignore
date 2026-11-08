@@ -22,3 +22,9 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# File instruksi agent lokal (aturan resmi ada di AGENTS.md)
+CLAUDE.md
+CLAUDE.local.md
+GEMINI.md
+.cursorrules
