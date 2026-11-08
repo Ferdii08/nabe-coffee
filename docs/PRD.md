@@ -98,7 +98,11 @@ Penomoran mengikuti tabel use case description di laporan Bab 3.3.
 ### UC-6 Login (Owner, Admin Cabang)
 - Login dengan email dan kata sandi. Setelah login, pengguna diarahkan ke dashboard sesuai peran.
 - Kalau gagal, tampilkan "Email atau kata sandi salah".
-- Two-Factor Authentication belum masuk lingkup (§10).
+- **Two-Factor Authentication (tugas 1.5):** setelah email dan kata sandi benar, Owner dan Admin Cabang memasukkan kode 6 digit dari aplikasi **Google Authenticator** (TOTP, RFC 6238).
+  - **Aktivasi pertama:** sistem menampilkan QR code, pengguna memindainya di Google Authenticator, lalu mengonfirmasi dengan satu kode.
+  - **Kode cadangan:** sistem memberi 8 kode cadangan sekali pakai untuk keadaan darurat, misalnya HP hilang.
+  - **Kode salah:** tampilkan "Kode autentikasi salah". Setelah 5 kali salah, login dikunci sementara selama 1 menit.
+  - **Wajib** untuk semua akun Owner dan Admin Cabang. Owner bisa me-reset 2FA milik Admin Cabang yang kehilangan akses.
 
 ### UC-7 Mengelola Konten / CMS (Owner)
 - Unggah atau ubah banner promosi dan teks informasi outlet, lalu terbitkan ke halaman publik.
@@ -168,6 +172,7 @@ Penomoran mengikuti tabel use case description di laporan Bab 3.3.
 - **Bahasa:** antarmuka bahasa Indonesia.
 - **Keamanan:**
   - password di-hash;
+  - 2FA Google Authenticator (TOTP) untuk Owner dan Admin Cabang, secret TOTP disimpan terenkripsi;
   - proteksi CSRF bawaan Laravel;
   - isolasi data per cabang di level Policy;
   - rahasia (token bot, SMTP) hanya di `.env`;
@@ -183,13 +188,15 @@ Diagram layer sistem untuk UTS (dari bawah ke atas, mengikuti format dosen):
 | Layer | Isi |
 |---|---|
 | Integrated Information System Application | Sistem Informasi Company Profile & Reservasi Multi-Cabang Nabe Coffee |
-| Platform | Web (responsif). Bot Telegram sebagai kanal admin. |
-| Autentikasi | Login (Owner & Admin Cabang). 2FA: belum diputuskan (§10). |
+| Web | Web responsif (desktop & HP). Tidak ada aplikasi desktop atau mobile native. Bot Telegram sebagai kanal notifikasi admin. |
+| Two Factor Authentication | Login email + kata sandi, lalu kode Google Authenticator (TOTP) untuk Owner & Admin Cabang |
 | OLTP / OLAP | **OLTP:** reservasi, kuota, pre-order, pembayaran, status, CMS, data master. **OLAP:** dashboard, heatmap, forecasting, skor no-show. |
-| Database & Web Server | MySQL + Nginx/Apache + PHP (Laravel), service Python untuk AI |
-| Virtual Machine / Container | Docker container / VPS (KVM) |
-| Hardware Virtualization | Intel VT-x / AMD-V (diaktifkan di BIOS) |
-| IT Hardware Infrastructure | Laptop pengembangan + server/VPS hosting |
+| Database & Web Server | Nginx + PHP-FPM (Laravel 12) + MySQL 8, service Python untuk modul AI |
+| Virtual Machine / LXC Container | AWS EC2 instance (Ubuntu Server), aplikasi dijalankan dalam Docker container |
+| Hardware Virtualization | AWS Nitro Hypervisor (berbasis KVM) |
+| IT Hardware Infrastructure | Server fisik di data center AWS, ditambah laptop tim untuk pengembangan |
+
+**Hosting:** AWS EC2 Free Tier (instance kelas `t3.micro`/`t2.micro`, 1 GiB RAM). Karena RAM kecil, aktifkan swap 1–2 GB. Service Python juga cukup memuat model yang ringan (TF-IDF + Logistic Regression). Pilih region terdekat, misalnya Jakarta (`ap-southeast-3`) atau Singapura (`ap-southeast-1`), sesuai yang tersedia di Free Tier akun.
 
 **Pola aplikasi:** MVC 3 lapis (Boundary → Control → Entity).
 - **Boundary:** halaman Blade (LoginPage, KatalogPage, BookingForm, PaymentPage, DaftarReservasiPage, DashboardAnalyticsPage, CMSForm, ChatbotWidget) dan bot Telegram.
@@ -202,7 +209,8 @@ Diagram layer sistem untuk UTS (dari bawah ke atas, mengikuti format dosen):
 |---|---|---|
 | D1 | Skema DP final (wajib/opsional, nominal) | Menunggu kesepakatan mitra |
 | D2 | Payment gateway atau hanya unggah bukti transfer | Default: unggah bukti. Gateway opsional. |
-| D3 | Two-Factor Authentication untuk admin (opsi: OTP via Telegram/email) | Belum diputuskan. Kalau ya, perlu ditambah ke backlog. |
+| D3 | Two-Factor Authentication untuk admin | **Diputuskan (8 Nov 2026):** Google Authenticator (TOTP), wajib untuk Owner & Admin Cabang. Masuk backlog sebagai tugas 1.5 (Hasbi). |
+| D8 | Hosting | **Diputuskan (8 Nov 2026):** AWS EC2 Free Tier |
 | D4 | E-tiket di UC-10 tertulis "Telegram/Email pelanggan", sedangkan Batasan Masalah menyebut WhatsApp/email | Ikuti Batasan Masalah: **WhatsApp/email** |
 | D5 | Jam operasional Soragan (laporan 07.00–00.00, form 10.00–24.00) | Konfirmasi ke mitra |
 | D6 | Kanal WhatsApp: API resmi, gateway pihak ketiga, atau tautan `wa.me` | Belum diputuskan (tugas 7.3) |

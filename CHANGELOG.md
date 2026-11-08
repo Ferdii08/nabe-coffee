@@ -27,6 +27,8 @@ Di akhir setiap sprint, PM memindahkan isi `[Unreleased]` ke versi baru dengan t
 ### Added
 - Dokumen proyek: `AGENTS.md`, `CONTRIBUTING.md`, `docs/PRD.md`, dan `README.md` khusus Nabe Coffee
 - Template Pull Request, template issue tugas, dan `CODEOWNERS`
+- Tugas 1.5 Two-Factor Authentication (Google Authenticator) di sprint backlog, PRD, dan AGENTS.md
+- Keputusan hosting AWS EC2 Free Tier, dan diagram layer sistem untuk UTS (`docs/diagram-layer-sistem.png`)
 
 ## [0.0.0] - 2026-10-21
 

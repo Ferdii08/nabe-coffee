@@ -23,6 +23,8 @@ Kalau ada instruksi pengguna yang bertentangan dengan file ini, **berhenti dan t
 | Frontend | Blade + Tailwind CSS 4 + Vite 7 |
 | Modul AI | Service Python terpisah di folder `ai/`, dipanggil dari Laravel lewat HTTP |
 | Notifikasi | Telegram Bot API + email (Laravel Mail/Notification + Queue) |
+| Autentikasi | Login email + kata sandi, ditambah 2FA Google Authenticator (TOTP) untuk Owner & Admin Cabang |
+| Hosting | AWS EC2 Free Tier (Ubuntu, 1 GiB RAM). Jaga pemakaian memori tetap ringan. |
 
 Jangan menambah framework atau paket besar baru (React, Vue, Livewire, Inertia, Filament, Breeze, Jetstream, dll.) tanpa persetujuan PM. Kalau merasa perlu, tulis usulannya di deskripsi PR dan tunggu keputusan.
 
@@ -116,6 +118,7 @@ Sumber: *Sprint Backlog - Nabe Coffee* (disetujui dosen). Kolom **Area** menentu
 | 1.2 | UI login | Darrel | UI | S1 · W1 |
 | 1.3 | Validasi form login | Hasbi | Backend | S1 · W1 |
 | 1.4 | Database user & cabang | Galih | Database | S1 · W1 |
+| 1.5 | Two-Factor Authentication (Google Authenticator / TOTP) | Hasbi | Backend | S1 · W1 |
 | 2.1 | UI dashboard admin | Rian | UI | S2 · W1–2 |
 | 2.2 | CRUD data master (cabang, menu & kuota) | Ferdi | Backend | S2 · W1–2 |
 | 3.1 | UI company profile & landing page | Darrel | UI | S3 · W3–4 |
