@@ -19,9 +19,19 @@
     --color-soft: #e9eee5;
     --color-lime: #d7ed8d;
     --color-gold: #efcb79;
-    --color-blush: #f8dad2;
     --color-red: #cc4639;
     --color-orange: #edac6b;
+
+    /* warna badge (lihat DESIGN.md §4) */
+    --color-gold-ink: #4c3a10;
+    --color-sage: #dcecc6;
+    --color-sage-ink: #355324;
+    --color-sky: #daecf0;
+    --color-grey: #e0e0e0;
+    --color-grey-ink: #454545;
+    --color-charcoal: #272e2d;
+    --color-blush: #f8dad2;
+    --color-blush-ink: #942d25;
 }
 
 @layer base {
@@ -37,5 +47,15 @@
     :focus-visible {
         outline: 3px solid var(--color-red);
         outline-offset: 4px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
     }
 }

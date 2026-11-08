@@ -1,0 +1,10 @@
+{
+  "description": "Discover Nabe Coffee's vibrant online presence, featuring easy reservations, community updates, and engaging content for coffee lovers.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

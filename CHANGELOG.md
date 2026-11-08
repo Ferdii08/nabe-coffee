@@ -30,6 +30,7 @@ Di akhir setiap sprint, PM memindahkan isi `[Unreleased]` ke versi baru dengan t
 - Tugas 1.5 Two-Factor Authentication (Google Authenticator) di sprint backlog, PRD, dan AGENTS.md
 - Keputusan hosting AWS EC2 Free Tier, dan diagram layer sistem untuk UTS (`docs/diagram-layer-sistem.png`)
 - `DESIGN.md` dari Figma Nabe Coffe, dan token warna & font di `resources/css/app.css`
+- Prototipe desain (React, acuan saja) di `docs/prototype/`, logo resmi Nabe di `docs/brand/` dan `public/images/brand/`
 
 ## [0.0.0] - 2026-10-21
 
